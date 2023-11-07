@@ -1,0 +1,772 @@
+2023-11-04 22:49:26 [INFO] Question: how many batter are there in this dataset
+2023-11-04 22:49:26 [INFO] Running PandasAI with openai LLM...
+2023-11-04 22:49:26 [INFO] Prompt ID: 480a7802-8a43-451d-93c8-cb7d68c9d4ba
+2023-11-04 22:49:26 [INFO] Using prompt: You are provided with the following pandas DataFrames:
+
+<dataframe>
+Dataframe dfs[0], with 225954 rows and 17 columns.
+This is the metadata of the dataframe dfs[0]:
+ID,innings,overs,ballnumber,batter,bowler,non-striker,extra_type,batsman_run,extras_run,total_run,non_boundary,isWicketDelivery,player_out,kind,fielders_involved,BattingTeam
+1312200,1,0,4,YBK Jaiswal,Mohammed Shami,JC Buttler,,0,0,0,0,0,,,,Rajasthan Royals
+1312200,1,0,5,YBK Jaiswal,Mohammed Shami,JC Buttler,,0,0,0,0,0,,,,Rajasthan Royals
+1312200,1,0,2,YBK Jaiswal,Mohammed Shami,JC Buttler,legbyes,0,1,1,0,0,,,,Rajasthan Royals
+1312200,1,0,3,JC Buttler,Mohammed Shami,YBK Jaiswal,,1,0,1,0,0,,,,Rajasthan Royals
+1312200,1,0,1,YBK Jaiswal,Mohammed Shami,JC Buttler,,0,0,0,0,0,,,,Rajasthan Royals
+</dataframe>
+
+<conversation>
+User: how many batter are there in this dataset
+</conversation>
+
+This is the initial python function. Do not change the params. Given the context, use the right dataframes.
+```python
+# TODO import all the dependencies required
+import pandas as pd
+
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    """
+    Analyze the data, using the provided dataframes (`dfs`).
+    1. Prepare: Preprocessing and cleaning data if necessary
+    2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+    3. Analyze: Conducting the actual analysis (if the user asks to plot a chart you must save it as an image in temp_chart.png and not show the chart.)
+    If the user requests to create a chart, utilize the Python matplotlib library to generate high-quality graphics that will be saved directly to a file.
+    At the end, return a dictionary of:
+    - type (possible values "string", "number", "dataframe", "plot")
+    - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+    Examples: 
+        { "type": "string", "value": f"The highest salary is {highest_salary}." }
+        or
+        { "type": "number", "value": 125 }
+        or
+        { "type": "dataframe", "value": pd.DataFrame({...}) }
+        or
+        { "type": "plot", "value": "temp_chart.png" }
+    """
+```
+
+Take a deep breath and reason step-by-step. Act as a senior data analyst.
+In the answer, you must never write the "technical" names of the tables.
+Based on the last message in the conversation:
+- return the updated analyze_data function wrapped within ```python ```
+2023-11-04 22:49:27 [INFO] error_code=invalid_api_key error_message='Incorrect API key provided: my-open-**-key. You can find your API key at https://platform.openai.com/account/api-keys.' error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2023-11-04 22:50:25 [INFO] Question: how many batter are there in this dataset
+2023-11-04 22:50:25 [INFO] Running PandasAI with openai LLM...
+2023-11-04 22:50:25 [INFO] Prompt ID: b36e557e-eb5c-4951-a6c9-7b200e06d690
+2023-11-04 22:50:25 [INFO] Using prompt: You are provided with the following pandas DataFrames:
+
+<dataframe>
+Dataframe dfs[0], with 225954 rows and 17 columns.
+This is the metadata of the dataframe dfs[0]:
+ID,innings,overs,ballnumber,batter,bowler,non-striker,extra_type,batsman_run,extras_run,total_run,non_boundary,isWicketDelivery,player_out,kind,fielders_involved,BattingTeam
+1312200,1,0,2,YBK Jaiswal,Mohammed Shami,JC Buttler,legbyes,0,1,1,0,0,,,,Rajasthan Royals
+1312200,1,0,3,JC Buttler,Mohammed Shami,YBK Jaiswal,,1,0,1,0,0,,,,Rajasthan Royals
+1312200,1,0,1,YBK Jaiswal,Mohammed Shami,JC Buttler,,0,0,0,0,0,,,,Rajasthan Royals
+1312200,1,0,4,YBK Jaiswal,Mohammed Shami,JC Buttler,,0,0,0,0,0,,,,Rajasthan Royals
+1312200,1,0,5,YBK Jaiswal,Mohammed Shami,JC Buttler,,0,0,0,0,0,,,,Rajasthan Royals
+</dataframe>
+
+<conversation>
+User: how many batter are there in this dataset
+</conversation>
+
+This is the initial python function. Do not change the params. Given the context, use the right dataframes.
+```python
+# TODO import all the dependencies required
+import pandas as pd
+
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    """
+    Analyze the data, using the provided dataframes (`dfs`).
+    1. Prepare: Preprocessing and cleaning data if necessary
+    2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+    3. Analyze: Conducting the actual analysis (if the user asks to plot a chart you must save it as an image in temp_chart.png and not show the chart.)
+    If the user requests to create a chart, utilize the Python matplotlib library to generate high-quality graphics that will be saved directly to a file.
+    At the end, return a dictionary of:
+    - type (possible values "string", "number", "dataframe", "plot")
+    - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+    Examples: 
+        { "type": "string", "value": f"The highest salary is {highest_salary}." }
+        or
+        { "type": "number", "value": 125 }
+        or
+        { "type": "dataframe", "value": pd.DataFrame({...}) }
+        or
+        { "type": "plot", "value": "temp_chart.png" }
+    """
+```
+
+Take a deep breath and reason step-by-step. Act as a senior data analyst.
+In the answer, you must never write the "technical" names of the tables.
+Based on the last message in the conversation:
+- return the updated analyze_data function wrapped within ```python ```
+2023-11-04 22:50:26 [INFO] error_code=invalid_api_key error_message='Incorrect API key provided: my-open-**-key. You can find your API key at https://platform.openai.com/account/api-keys.' error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2023-11-04 22:52:44 [INFO] Question: give a summary about this dataset
+2023-11-04 22:52:44 [INFO] Running PandasAI with openai LLM...
+2023-11-04 22:52:44 [INFO] Prompt ID: 0d04f39f-36b4-4d7b-b6a4-83ea53744178
+2023-11-04 22:52:44 [INFO] Using prompt: You are provided with the following pandas DataFrames:
+
+<dataframe>
+Dataframe dfs[0], with 225954 rows and 17 columns.
+This is the metadata of the dataframe dfs[0]:
+ID,innings,overs,ballnumber,batter,bowler,non-striker,extra_type,batsman_run,extras_run,total_run,non_boundary,isWicketDelivery,player_out,kind,fielders_involved,BattingTeam
+1312200,1,0,4,YBK Jaiswal,Mohammed Shami,JC Buttler,,0,0,0,0,0,,,,Rajasthan Royals
+1312200,1,0,3,JC Buttler,Mohammed Shami,YBK Jaiswal,,1,0,1,0,0,,,,Rajasthan Royals
+1312200,1,0,1,YBK Jaiswal,Mohammed Shami,JC Buttler,,0,0,0,0,0,,,,Rajasthan Royals
+1312200,1,0,5,YBK Jaiswal,Mohammed Shami,JC Buttler,,0,0,0,0,0,,,,Rajasthan Royals
+1312200,1,0,2,YBK Jaiswal,Mohammed Shami,JC Buttler,legbyes,0,1,1,0,0,,,,Rajasthan Royals
+</dataframe>
+
+<conversation>
+User: give a summary about this dataset
+</conversation>
+
+This is the initial python function. Do not change the params. Given the context, use the right dataframes.
+```python
+# TODO import all the dependencies required
+import pandas as pd
+
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    """
+    Analyze the data, using the provided dataframes (`dfs`).
+    1. Prepare: Preprocessing and cleaning data if necessary
+    2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+    3. Analyze: Conducting the actual analysis (if the user asks to plot a chart you must save it as an image in temp_chart.png and not show the chart.)
+    If the user requests to create a chart, utilize the Python matplotlib library to generate high-quality graphics that will be saved directly to a file.
+    At the end, return a dictionary of:
+    - type (possible values "string", "number", "dataframe", "plot")
+    - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+    Examples: 
+        { "type": "string", "value": f"The highest salary is {highest_salary}." }
+        or
+        { "type": "number", "value": 125 }
+        or
+        { "type": "dataframe", "value": pd.DataFrame({...}) }
+        or
+        { "type": "plot", "value": "temp_chart.png" }
+    """
+```
+
+Take a deep breath and reason step-by-step. Act as a senior data analyst.
+In the answer, you must never write the "technical" names of the tables.
+Based on the last message in the conversation:
+- return the updated analyze_data function wrapped within ```python ```
+2023-11-04 22:52:45 [INFO] error_code=invalid_api_key error_message='Incorrect API key provided: my-open-**-key. You can find your API key at https://platform.openai.com/account/api-keys.' error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2023-11-04 22:54:06 [INFO] Question: give me a summary about this dataset
+2023-11-04 22:54:06 [INFO] Running PandasAI with openai LLM...
+2023-11-04 22:54:06 [INFO] Prompt ID: 8284816e-5ce5-4ad3-a27f-58d693e957b9
+2023-11-04 22:54:06 [INFO] Using prompt: You are provided with the following pandas DataFrames:
+
+<dataframe>
+Dataframe dfs[0], with 225954 rows and 17 columns.
+This is the metadata of the dataframe dfs[0]:
+ID,innings,overs,ballnumber,batter,bowler,non-striker,extra_type,batsman_run,extras_run,total_run,non_boundary,isWicketDelivery,player_out,kind,fielders_involved,BattingTeam
+1312200,1,0,2,YBK Jaiswal,Mohammed Shami,JC Buttler,legbyes,0,1,1,0,0,,,,Rajasthan Royals
+1312200,1,0,4,YBK Jaiswal,Mohammed Shami,JC Buttler,,0,0,0,0,0,,,,Rajasthan Royals
+1312200,1,0,5,YBK Jaiswal,Mohammed Shami,JC Buttler,,0,0,0,0,0,,,,Rajasthan Royals
+1312200,1,0,1,YBK Jaiswal,Mohammed Shami,JC Buttler,,0,0,0,0,0,,,,Rajasthan Royals
+1312200,1,0,3,JC Buttler,Mohammed Shami,YBK Jaiswal,,1,0,1,0,0,,,,Rajasthan Royals
+</dataframe>
+
+<conversation>
+User: give me a summary about this dataset
+</conversation>
+
+This is the initial python function. Do not change the params. Given the context, use the right dataframes.
+```python
+# TODO import all the dependencies required
+import pandas as pd
+
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    """
+    Analyze the data, using the provided dataframes (`dfs`).
+    1. Prepare: Preprocessing and cleaning data if necessary
+    2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+    3. Analyze: Conducting the actual analysis (if the user asks to plot a chart you must save it as an image in temp_chart.png and not show the chart.)
+    If the user requests to create a chart, utilize the Python matplotlib library to generate high-quality graphics that will be saved directly to a file.
+    At the end, return a dictionary of:
+    - type (possible values "string", "number", "dataframe", "plot")
+    - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+    Examples: 
+        { "type": "string", "value": f"The highest salary is {highest_salary}." }
+        or
+        { "type": "number", "value": 125 }
+        or
+        { "type": "dataframe", "value": pd.DataFrame({...}) }
+        or
+        { "type": "plot", "value": "temp_chart.png" }
+    """
+```
+
+Take a deep breath and reason step-by-step. Act as a senior data analyst.
+In the answer, you must never write the "technical" names of the tables.
+Based on the last message in the conversation:
+- return the updated analyze_data function wrapped within ```python ```
+2023-11-04 22:54:07 [INFO] error_code=invalid_api_key error_message='Incorrect API key provided: my-open-**-key. You can find your API key at https://platform.openai.com/account/api-keys.' error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2023-11-04 22:54:57 [INFO] Question: give me a summary about this dataset
+2023-11-04 22:54:57 [INFO] Running PandasAI with openai LLM...
+2023-11-04 22:54:57 [INFO] Prompt ID: 7f9d7708-e10b-4b0b-8ee8-3a68d6999c25
+2023-11-04 22:54:57 [INFO] Using prompt: You are provided with the following pandas DataFrames:
+
+<dataframe>
+Dataframe dfs[0], with 225954 rows and 17 columns.
+This is the metadata of the dataframe dfs[0]:
+ID,innings,overs,ballnumber,batter,bowler,non-striker,extra_type,batsman_run,extras_run,total_run,non_boundary,isWicketDelivery,player_out,kind,fielders_involved,BattingTeam
+1312200,1,0,3,JC Buttler,Mohammed Shami,YBK Jaiswal,,1,0,1,0,0,,,,Rajasthan Royals
+1312200,1,0,1,YBK Jaiswal,Mohammed Shami,JC Buttler,,0,0,0,0,0,,,,Rajasthan Royals
+1312200,1,0,4,YBK Jaiswal,Mohammed Shami,JC Buttler,,0,0,0,0,0,,,,Rajasthan Royals
+1312200,1,0,2,YBK Jaiswal,Mohammed Shami,JC Buttler,legbyes,0,1,1,0,0,,,,Rajasthan Royals
+1312200,1,0,5,YBK Jaiswal,Mohammed Shami,JC Buttler,,0,0,0,0,0,,,,Rajasthan Royals
+</dataframe>
+
+<conversation>
+User: give me a summary about this dataset
+</conversation>
+
+This is the initial python function. Do not change the params. Given the context, use the right dataframes.
+```python
+# TODO import all the dependencies required
+import pandas as pd
+
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    """
+    Analyze the data, using the provided dataframes (`dfs`).
+    1. Prepare: Preprocessing and cleaning data if necessary
+    2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+    3. Analyze: Conducting the actual analysis (if the user asks to plot a chart you must save it as an image in temp_chart.png and not show the chart.)
+    If the user requests to create a chart, utilize the Python matplotlib library to generate high-quality graphics that will be saved directly to a file.
+    At the end, return a dictionary of:
+    - type (possible values "string", "number", "dataframe", "plot")
+    - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+    Examples: 
+        { "type": "string", "value": f"The highest salary is {highest_salary}." }
+        or
+        { "type": "number", "value": 125 }
+        or
+        { "type": "dataframe", "value": pd.DataFrame({...}) }
+        or
+        { "type": "plot", "value": "temp_chart.png" }
+    """
+```
+
+Take a deep breath and reason step-by-step. Act as a senior data analyst.
+In the answer, you must never write the "technical" names of the tables.
+Based on the last message in the conversation:
+- return the updated analyze_data function wrapped within ```python ```
+2023-11-04 22:54:58 [INFO] error_code=invalid_api_key error_message='Incorrect API key provided: my-open-**-key. You can find your API key at https://platform.openai.com/account/api-keys.' error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2023-11-04 22:57:41 [INFO] Question: give a summary of this project
+2023-11-04 22:57:41 [INFO] Running PandasAI with openai LLM...
+2023-11-04 22:57:41 [INFO] Prompt ID: f16fe75d-d4a1-4ed8-a7bd-a8fd61e8443b
+2023-11-04 22:57:41 [INFO] Using prompt: You are provided with the following pandas DataFrames:
+
+<dataframe>
+Dataframe dfs[0], with 225954 rows and 17 columns.
+This is the metadata of the dataframe dfs[0]:
+ID,innings,overs,ballnumber,batter,bowler,non-striker,extra_type,batsman_run,extras_run,total_run,non_boundary,isWicketDelivery,player_out,kind,fielders_involved,BattingTeam
+1312200,1,0,5,YBK Jaiswal,Mohammed Shami,JC Buttler,,0,0,0,0,0,,,,Rajasthan Royals
+1312200,1,0,3,JC Buttler,Mohammed Shami,YBK Jaiswal,,1,0,1,0,0,,,,Rajasthan Royals
+1312200,1,0,4,YBK Jaiswal,Mohammed Shami,JC Buttler,,0,0,0,0,0,,,,Rajasthan Royals
+1312200,1,0,2,YBK Jaiswal,Mohammed Shami,JC Buttler,legbyes,0,1,1,0,0,,,,Rajasthan Royals
+1312200,1,0,1,YBK Jaiswal,Mohammed Shami,JC Buttler,,0,0,0,0,0,,,,Rajasthan Royals
+</dataframe>
+
+<conversation>
+User: give a summary of this project
+</conversation>
+
+This is the initial python function. Do not change the params. Given the context, use the right dataframes.
+```python
+# TODO import all the dependencies required
+import pandas as pd
+
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    """
+    Analyze the data, using the provided dataframes (`dfs`).
+    1. Prepare: Preprocessing and cleaning data if necessary
+    2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+    3. Analyze: Conducting the actual analysis (if the user asks to plot a chart you must save it as an image in temp_chart.png and not show the chart.)
+    If the user requests to create a chart, utilize the Python matplotlib library to generate high-quality graphics that will be saved directly to a file.
+    At the end, return a dictionary of:
+    - type (possible values "string", "number", "dataframe", "plot")
+    - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+    Examples: 
+        { "type": "string", "value": f"The highest salary is {highest_salary}." }
+        or
+        { "type": "number", "value": 125 }
+        or
+        { "type": "dataframe", "value": pd.DataFrame({...}) }
+        or
+        { "type": "plot", "value": "temp_chart.png" }
+    """
+```
+
+Take a deep breath and reason step-by-step. Act as a senior data analyst.
+In the answer, you must never write the "technical" names of the tables.
+Based on the last message in the conversation:
+- return the updated analyze_data function wrapped within ```python ```
+2023-11-04 22:57:42 [INFO] error_code=invalid_api_key error_message='Incorrect API key provided: my-open-**-key. You can find your API key at https://platform.openai.com/account/api-keys.' error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2023-11-04 23:24:21 [INFO] Question: kdn
+
+2023-11-04 23:24:21 [INFO] Running PandasAI with openai LLM...
+2023-11-04 23:24:21 [INFO] Prompt ID: 3bdeda5a-029f-46bc-beb4-0b03802cd417
+2023-11-04 23:24:22 [INFO] Using prompt: You are provided with the following pandas DataFrames:
+
+<dataframe>
+Dataframe dfs[0], with 225954 rows and 17 columns.
+This is the metadata of the dataframe dfs[0]:
+ID,innings,overs,ballnumber,batter,bowler,non-striker,extra_type,batsman_run,extras_run,total_run,non_boundary,isWicketDelivery,player_out,kind,fielders_involved,BattingTeam
+1312200,1,0,5,YBK Jaiswal,Mohammed Shami,JC Buttler,,0,0,0,0,0,,,,Rajasthan Royals
+1312200,1,0,4,YBK Jaiswal,Mohammed Shami,JC Buttler,,0,0,0,0,0,,,,Rajasthan Royals
+1312200,1,0,1,YBK Jaiswal,Mohammed Shami,JC Buttler,,0,0,0,0,0,,,,Rajasthan Royals
+1312200,1,0,3,JC Buttler,Mohammed Shami,YBK Jaiswal,,1,0,1,0,0,,,,Rajasthan Royals
+1312200,1,0,2,YBK Jaiswal,Mohammed Shami,JC Buttler,legbyes,0,1,1,0,0,,,,Rajasthan Royals
+</dataframe>
+
+<conversation>
+User: kdn
+
+</conversation>
+
+This is the initial python function. Do not change the params. Given the context, use the right dataframes.
+```python
+# TODO import all the dependencies required
+import pandas as pd
+
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    """
+    Analyze the data, using the provided dataframes (`dfs`).
+    1. Prepare: Preprocessing and cleaning data if necessary
+    2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+    3. Analyze: Conducting the actual analysis (if the user asks to plot a chart you must save it as an image in temp_chart.png and not show the chart.)
+    If the user requests to create a chart, utilize the Python matplotlib library to generate high-quality graphics that will be saved directly to a file.
+    At the end, return a dictionary of:
+    - type (possible values "string", "number", "dataframe", "plot")
+    - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+    Examples: 
+        { "type": "string", "value": f"The highest salary is {highest_salary}." }
+        or
+        { "type": "number", "value": 125 }
+        or
+        { "type": "dataframe", "value": pd.DataFrame({...}) }
+        or
+        { "type": "plot", "value": "temp_chart.png" }
+    """
+```
+
+Take a deep breath and reason step-by-step. Act as a senior data analyst.
+In the answer, you must never write the "technical" names of the tables.
+Based on the last message in the conversation:
+- return the updated analyze_data function wrapped within ```python ```
+2023-11-04 23:24:23 [INFO] error_code=invalid_api_key error_message='Incorrect API key provided: my-open-**-key. You can find your API key at https://platform.openai.com/account/api-keys.' error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2023-11-04 23:25:53 [INFO] Question: ks
+
+2023-11-04 23:25:53 [INFO] Running PandasAI with openai LLM...
+2023-11-04 23:25:53 [INFO] Prompt ID: 3a32066d-b392-4d5c-868d-12f7b0e9f1e8
+2023-11-04 23:25:53 [INFO] Using prompt: You are provided with the following pandas DataFrames:
+
+<dataframe>
+Dataframe dfs[0], with 225954 rows and 17 columns.
+This is the metadata of the dataframe dfs[0]:
+ID,innings,overs,ballnumber,batter,bowler,non-striker,extra_type,batsman_run,extras_run,total_run,non_boundary,isWicketDelivery,player_out,kind,fielders_involved,BattingTeam
+1312200,1,0,4,YBK Jaiswal,Mohammed Shami,JC Buttler,,0,0,0,0,0,,,,Rajasthan Royals
+1312200,1,0,2,YBK Jaiswal,Mohammed Shami,JC Buttler,legbyes,0,1,1,0,0,,,,Rajasthan Royals
+1312200,1,0,1,YBK Jaiswal,Mohammed Shami,JC Buttler,,0,0,0,0,0,,,,Rajasthan Royals
+1312200,1,0,5,YBK Jaiswal,Mohammed Shami,JC Buttler,,0,0,0,0,0,,,,Rajasthan Royals
+1312200,1,0,3,JC Buttler,Mohammed Shami,YBK Jaiswal,,1,0,1,0,0,,,,Rajasthan Royals
+</dataframe>
+
+<conversation>
+User: ks
+
+</conversation>
+
+This is the initial python function. Do not change the params. Given the context, use the right dataframes.
+```python
+# TODO import all the dependencies required
+import pandas as pd
+
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    """
+    Analyze the data, using the provided dataframes (`dfs`).
+    1. Prepare: Preprocessing and cleaning data if necessary
+    2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+    3. Analyze: Conducting the actual analysis (if the user asks to plot a chart you must save it as an image in temp_chart.png and not show the chart.)
+    If the user requests to create a chart, utilize the Python matplotlib library to generate high-quality graphics that will be saved directly to a file.
+    At the end, return a dictionary of:
+    - type (possible values "string", "number", "dataframe", "plot")
+    - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+    Examples: 
+        { "type": "string", "value": f"The highest salary is {highest_salary}." }
+        or
+        { "type": "number", "value": 125 }
+        or
+        { "type": "dataframe", "value": pd.DataFrame({...}) }
+        or
+        { "type": "plot", "value": "temp_chart.png" }
+    """
+```
+
+Take a deep breath and reason step-by-step. Act as a senior data analyst.
+In the answer, you must never write the "technical" names of the tables.
+Based on the last message in the conversation:
+- return the updated analyze_data function wrapped within ```python ```
+2023-11-04 23:25:54 [INFO] error_code=invalid_api_key error_message='Incorrect API key provided: my-open-**-key. You can find your API key at https://platform.openai.com/account/api-keys.' error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2023-11-04 23:32:32 [INFO] Question: jiji
+
+2023-11-04 23:32:32 [INFO] Running PandasAI with openai LLM...
+2023-11-04 23:32:32 [INFO] Prompt ID: eaf79c0c-067f-41db-bda3-3936878fab59
+2023-11-04 23:32:32 [INFO] Using prompt: You are provided with the following pandas DataFrames:
+
+<dataframe>
+Dataframe dfs[0], with 225954 rows and 17 columns.
+This is the metadata of the dataframe dfs[0]:
+ID,innings,overs,ballnumber,batter,bowler,non-striker,extra_type,batsman_run,extras_run,total_run,non_boundary,isWicketDelivery,player_out,kind,fielders_involved,BattingTeam
+1312200,1,0,1,YBK Jaiswal,Mohammed Shami,JC Buttler,,0,0,0,0,0,,,,Rajasthan Royals
+1312200,1,0,3,JC Buttler,Mohammed Shami,YBK Jaiswal,,1,0,1,0,0,,,,Rajasthan Royals
+1312200,1,0,2,YBK Jaiswal,Mohammed Shami,JC Buttler,legbyes,0,1,1,0,0,,,,Rajasthan Royals
+1312200,1,0,4,YBK Jaiswal,Mohammed Shami,JC Buttler,,0,0,0,0,0,,,,Rajasthan Royals
+1312200,1,0,5,YBK Jaiswal,Mohammed Shami,JC Buttler,,0,0,0,0,0,,,,Rajasthan Royals
+</dataframe>
+
+<conversation>
+User: jiji
+
+</conversation>
+
+This is the initial python function. Do not change the params. Given the context, use the right dataframes.
+```python
+# TODO import all the dependencies required
+import pandas as pd
+
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    """
+    Analyze the data, using the provided dataframes (`dfs`).
+    1. Prepare: Preprocessing and cleaning data if necessary
+    2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+    3. Analyze: Conducting the actual analysis (if the user asks to plot a chart you must save it as an image in temp_chart.png and not show the chart.)
+    If the user requests to create a chart, utilize the Python matplotlib library to generate high-quality graphics that will be saved directly to a file.
+    At the end, return a dictionary of:
+    - type (possible values "string", "number", "dataframe", "plot")
+    - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+    Examples: 
+        { "type": "string", "value": f"The highest salary is {highest_salary}." }
+        or
+        { "type": "number", "value": 125 }
+        or
+        { "type": "dataframe", "value": pd.DataFrame({...}) }
+        or
+        { "type": "plot", "value": "temp_chart.png" }
+    """
+```
+
+Take a deep breath and reason step-by-step. Act as a senior data analyst.
+In the answer, you must never write the "technical" names of the tables.
+Based on the last message in the conversation:
+- return the updated analyze_data function wrapped within ```python ```
+2023-11-04 23:32:32 [INFO] error_code=invalid_api_key error_message='Incorrect API key provided: my-open-**-key. You can find your API key at https://platform.openai.com/account/api-keys.' error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2023-11-04 23:37:45 [INFO] Question: kjsx
+2023-11-04 23:37:45 [INFO] Running PandasAI with openai LLM...
+2023-11-04 23:37:45 [INFO] Prompt ID: db39a7f4-5ed0-4cf2-a19c-b9dd9117ee07
+2023-11-04 23:37:45 [INFO] Using prompt: You are provided with the following pandas DataFrames:
+
+<dataframe>
+Dataframe dfs[0], with 225954 rows and 17 columns.
+This is the metadata of the dataframe dfs[0]:
+ID,innings,overs,ballnumber,batter,bowler,non-striker,extra_type,batsman_run,extras_run,total_run,non_boundary,isWicketDelivery,player_out,kind,fielders_involved,BattingTeam
+1312200,1,0,3,JC Buttler,Mohammed Shami,YBK Jaiswal,,1,0,1,0,0,,,,Rajasthan Royals
+1312200,1,0,5,YBK Jaiswal,Mohammed Shami,JC Buttler,,0,0,0,0,0,,,,Rajasthan Royals
+1312200,1,0,4,YBK Jaiswal,Mohammed Shami,JC Buttler,,0,0,0,0,0,,,,Rajasthan Royals
+1312200,1,0,2,YBK Jaiswal,Mohammed Shami,JC Buttler,legbyes,0,1,1,0,0,,,,Rajasthan Royals
+1312200,1,0,1,YBK Jaiswal,Mohammed Shami,JC Buttler,,0,0,0,0,0,,,,Rajasthan Royals
+</dataframe>
+
+<conversation>
+User: kjsx
+</conversation>
+
+This is the initial python function. Do not change the params. Given the context, use the right dataframes.
+```python
+# TODO import all the dependencies required
+import pandas as pd
+
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    """
+    Analyze the data, using the provided dataframes (`dfs`).
+    1. Prepare: Preprocessing and cleaning data if necessary
+    2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+    3. Analyze: Conducting the actual analysis (if the user asks to plot a chart you must save it as an image in temp_chart.png and not show the chart.)
+    If the user requests to create a chart, utilize the Python matplotlib library to generate high-quality graphics that will be saved directly to a file.
+    At the end, return a dictionary of:
+    - type (possible values "string", "number", "dataframe", "plot")
+    - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+    Examples: 
+        { "type": "string", "value": f"The highest salary is {highest_salary}." }
+        or
+        { "type": "number", "value": 125 }
+        or
+        { "type": "dataframe", "value": pd.DataFrame({...}) }
+        or
+        { "type": "plot", "value": "temp_chart.png" }
+    """
+```
+
+Take a deep breath and reason step-by-step. Act as a senior data analyst.
+In the answer, you must never write the "technical" names of the tables.
+Based on the last message in the conversation:
+- return the updated analyze_data function wrapped within ```python ```
+2023-11-04 23:37:46 [INFO] error_code=invalid_api_key error_message='Incorrect API key provided: my-open-**-key. You can find your API key at https://platform.openai.com/account/api-keys.' error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2023-11-04 23:39:10 [INFO] Question: give summary of this dataset
+2023-11-04 23:39:10 [INFO] Running PandasAI with openai LLM...
+2023-11-04 23:39:10 [INFO] Prompt ID: facfa8c3-76b4-43dc-a22d-9605c394eb6f
+2023-11-04 23:39:10 [INFO] Using prompt: You are provided with the following pandas DataFrames:
+
+<dataframe>
+Dataframe dfs[0], with 225954 rows and 17 columns.
+This is the metadata of the dataframe dfs[0]:
+ID,innings,overs,ballnumber,batter,bowler,non-striker,extra_type,batsman_run,extras_run,total_run,non_boundary,isWicketDelivery,player_out,kind,fielders_involved,BattingTeam
+1312200,1,0,3,JC Buttler,Mohammed Shami,YBK Jaiswal,,1,0,1,0,0,,,,Rajasthan Royals
+1312200,1,0,2,YBK Jaiswal,Mohammed Shami,JC Buttler,legbyes,0,1,1,0,0,,,,Rajasthan Royals
+1312200,1,0,5,YBK Jaiswal,Mohammed Shami,JC Buttler,,0,0,0,0,0,,,,Rajasthan Royals
+1312200,1,0,4,YBK Jaiswal,Mohammed Shami,JC Buttler,,0,0,0,0,0,,,,Rajasthan Royals
+1312200,1,0,1,YBK Jaiswal,Mohammed Shami,JC Buttler,,0,0,0,0,0,,,,Rajasthan Royals
+</dataframe>
+
+<conversation>
+User: give summary of this dataset
+</conversation>
+
+This is the initial python function. Do not change the params. Given the context, use the right dataframes.
+```python
+# TODO import all the dependencies required
+import pandas as pd
+
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    """
+    Analyze the data, using the provided dataframes (`dfs`).
+    1. Prepare: Preprocessing and cleaning data if necessary
+    2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+    3. Analyze: Conducting the actual analysis (if the user asks to plot a chart you must save it as an image in temp_chart.png and not show the chart.)
+    If the user requests to create a chart, utilize the Python matplotlib library to generate high-quality graphics that will be saved directly to a file.
+    At the end, return a dictionary of:
+    - type (possible values "string", "number", "dataframe", "plot")
+    - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+    Examples: 
+        { "type": "string", "value": f"The highest salary is {highest_salary}." }
+        or
+        { "type": "number", "value": 125 }
+        or
+        { "type": "dataframe", "value": pd.DataFrame({...}) }
+        or
+        { "type": "plot", "value": "temp_chart.png" }
+    """
+```
+
+Take a deep breath and reason step-by-step. Act as a senior data analyst.
+In the answer, you must never write the "technical" names of the tables.
+Based on the last message in the conversation:
+- return the updated analyze_data function wrapped within ```python ```
+2023-11-04 23:39:11 [INFO] error_code=invalid_api_key error_message='Incorrect API key provided: my-open-**-key. You can find your API key at https://platform.openai.com/account/api-keys.' error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2023-11-04 23:50:10 [INFO] Question: mk
+2023-11-04 23:50:10 [INFO] Running PandasAI with openai LLM...
+2023-11-04 23:50:10 [INFO] Prompt ID: e4f8e621-850b-49b5-bd34-f793607f6492
+2023-11-04 23:50:10 [INFO] Using prompt: You are provided with the following pandas DataFrames:
+
+<dataframe>
+Dataframe dfs[0], with 225954 rows and 17 columns.
+This is the metadata of the dataframe dfs[0]:
+ID,innings,overs,ballnumber,batter,bowler,non-striker,extra_type,batsman_run,extras_run,total_run,non_boundary,isWicketDelivery,player_out,kind,fielders_involved,BattingTeam
+1312200,1,0,3,JC Buttler,Mohammed Shami,YBK Jaiswal,,1,0,1,0,0,,,,Rajasthan Royals
+1312200,1,0,4,YBK Jaiswal,Mohammed Shami,JC Buttler,,0,0,0,0,0,,,,Rajasthan Royals
+1312200,1,0,2,YBK Jaiswal,Mohammed Shami,JC Buttler,legbyes,0,1,1,0,0,,,,Rajasthan Royals
+1312200,1,0,1,YBK Jaiswal,Mohammed Shami,JC Buttler,,0,0,0,0,0,,,,Rajasthan Royals
+1312200,1,0,5,YBK Jaiswal,Mohammed Shami,JC Buttler,,0,0,0,0,0,,,,Rajasthan Royals
+</dataframe>
+
+<conversation>
+User: mk
+</conversation>
+
+This is the initial python function. Do not change the params. Given the context, use the right dataframes.
+```python
+# TODO import all the dependencies required
+import pandas as pd
+
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    """
+    Analyze the data, using the provided dataframes (`dfs`).
+    1. Prepare: Preprocessing and cleaning data if necessary
+    2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+    3. Analyze: Conducting the actual analysis (if the user asks to plot a chart you must save it as an image in temp_chart.png and not show the chart.)
+    If the user requests to create a chart, utilize the Python matplotlib library to generate high-quality graphics that will be saved directly to a file.
+    At the end, return a dictionary of:
+    - type (possible values "string", "number", "dataframe", "plot")
+    - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+    Examples: 
+        { "type": "string", "value": f"The highest salary is {highest_salary}." }
+        or
+        { "type": "number", "value": 125 }
+        or
+        { "type": "dataframe", "value": pd.DataFrame({...}) }
+        or
+        { "type": "plot", "value": "temp_chart.png" }
+    """
+```
+
+Take a deep breath and reason step-by-step. Act as a senior data analyst.
+In the answer, you must never write the "technical" names of the tables.
+Based on the last message in the conversation:
+- return the updated analyze_data function wrapped within ```python ```
+2023-11-04 23:50:12 [INFO] error_code=invalid_api_key error_message='Incorrect API key provided: my-open-**-key. You can find your API key at https://platform.openai.com/account/api-keys.' error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2023-11-04 23:59:07 [INFO] Question: give summary of dataset
+2023-11-04 23:59:07 [INFO] Running PandasAI with openai LLM...
+2023-11-04 23:59:07 [INFO] Prompt ID: 9a0e23af-261c-4556-9b99-76723c2cd03e
+2023-11-04 23:59:07 [INFO] Using prompt: You are provided with the following pandas DataFrames:
+
+<dataframe>
+Dataframe dfs[0], with 225954 rows and 17 columns.
+This is the metadata of the dataframe dfs[0]:
+ID,innings,overs,ballnumber,batter,bowler,non-striker,extra_type,batsman_run,extras_run,total_run,non_boundary,isWicketDelivery,player_out,kind,fielders_involved,BattingTeam
+1312200,1,0,5,YBK Jaiswal,Mohammed Shami,JC Buttler,,0,0,0,0,0,,,,Rajasthan Royals
+1312200,1,0,2,YBK Jaiswal,Mohammed Shami,JC Buttler,legbyes,0,1,1,0,0,,,,Rajasthan Royals
+1312200,1,0,1,YBK Jaiswal,Mohammed Shami,JC Buttler,,0,0,0,0,0,,,,Rajasthan Royals
+1312200,1,0,3,JC Buttler,Mohammed Shami,YBK Jaiswal,,1,0,1,0,0,,,,Rajasthan Royals
+1312200,1,0,4,YBK Jaiswal,Mohammed Shami,JC Buttler,,0,0,0,0,0,,,,Rajasthan Royals
+</dataframe>
+
+<conversation>
+User: give summary of dataset
+</conversation>
+
+This is the initial python function. Do not change the params. Given the context, use the right dataframes.
+```python
+# TODO import all the dependencies required
+import pandas as pd
+
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    """
+    Analyze the data, using the provided dataframes (`dfs`).
+    1. Prepare: Preprocessing and cleaning data if necessary
+    2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+    3. Analyze: Conducting the actual analysis (if the user asks to plot a chart you must save it as an image in temp_chart.png and not show the chart.)
+    If the user requests to create a chart, utilize the Python matplotlib library to generate high-quality graphics that will be saved directly to a file.
+    At the end, return a dictionary of:
+    - type (possible values "string", "number", "dataframe", "plot")
+    - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+    Examples: 
+        { "type": "string", "value": f"The highest salary is {highest_salary}." }
+        or
+        { "type": "number", "value": 125 }
+        or
+        { "type": "dataframe", "value": pd.DataFrame({...}) }
+        or
+        { "type": "plot", "value": "temp_chart.png" }
+    """
+```
+
+Take a deep breath and reason step-by-step. Act as a senior data analyst.
+In the answer, you must never write the "technical" names of the tables.
+Based on the last message in the conversation:
+- return the updated analyze_data function wrapped within ```python ```
+2023-11-04 23:59:08 [INFO] error_code=invalid_api_key error_message='Incorrect API key provided: my-open-**-key. You can find your API key at https://platform.openai.com/account/api-keys.' error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2023-11-05 00:02:19 [INFO] generated new fontManager
+2023-11-05 00:06:43 [INFO] Question: give a summary of this dataset
+2023-11-05 00:06:44 [INFO] Running PandasAI with openai LLM...
+2023-11-05 00:06:44 [INFO] Prompt ID: a95eea4f-ac52-4db2-a4e9-e1e918cb6953
+2023-11-05 00:06:45 [INFO] Using prompt: You are provided with the following pandas DataFrames:
+
+<dataframe>
+Dataframe dfs[0], with 225954 rows and 17 columns.
+This is the metadata of the dataframe dfs[0]:
+ID,innings,overs,ballnumber,batter,bowler,non-striker,extra_type,batsman_run,extras_run,total_run,non_boundary,isWicketDelivery,player_out,kind,fielders_involved,BattingTeam
+1312200,1,0,2,YBK Jaiswal,Mohammed Shami,JC Buttler,legbyes,0,1,1,0,0,,,,Rajasthan Royals
+1312200,1,0,5,YBK Jaiswal,Mohammed Shami,JC Buttler,,0,0,0,0,0,,,,Rajasthan Royals
+1312200,1,0,3,JC Buttler,Mohammed Shami,YBK Jaiswal,,1,0,1,0,0,,,,Rajasthan Royals
+1312200,1,0,1,YBK Jaiswal,Mohammed Shami,JC Buttler,,0,0,0,0,0,,,,Rajasthan Royals
+1312200,1,0,4,YBK Jaiswal,Mohammed Shami,JC Buttler,,0,0,0,0,0,,,,Rajasthan Royals
+</dataframe>
+
+<conversation>
+User: give a summary of this dataset
+</conversation>
+
+This is the initial python function. Do not change the params. Given the context, use the right dataframes.
+```python
+# TODO import all the dependencies required
+import pandas as pd
+
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    """
+    Analyze the data, using the provided dataframes (`dfs`).
+    1. Prepare: Preprocessing and cleaning data if necessary
+    2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+    3. Analyze: Conducting the actual analysis (if the user asks to plot a chart you must save it as an image in temp_chart.png and not show the chart.)
+    If the user requests to create a chart, utilize the Python matplotlib library to generate high-quality graphics that will be saved directly to a file.
+    At the end, return a dictionary of:
+    - type (possible values "string", "number", "dataframe", "plot")
+    - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+    Examples: 
+        { "type": "string", "value": f"The highest salary is {highest_salary}." }
+        or
+        { "type": "number", "value": 125 }
+        or
+        { "type": "dataframe", "value": pd.DataFrame({...}) }
+        or
+        { "type": "plot", "value": "temp_chart.png" }
+    """
+```
+
+Take a deep breath and reason step-by-step. Act as a senior data analyst.
+In the answer, you must never write the "technical" names of the tables.
+Based on the last message in the conversation:
+- return the updated analyze_data function wrapped within ```python ```
+2023-11-05 00:06:47 [INFO] error_code=insufficient_quota error_message='You exceeded your current quota, please check your plan and billing details.' error_param=None error_type=insufficient_quota message='OpenAI API error received' stream_error=False
+2023-11-05 00:08:13 [INFO] Question: how many batter are there in this dataset
+2023-11-05 00:08:14 [INFO] Running PandasAI with openai LLM...
+2023-11-05 00:08:14 [INFO] Prompt ID: 1f8cc6f4-eaec-4386-a3a5-920b5271f188
+2023-11-05 00:08:16 [INFO] Using prompt: You are provided with the following pandas DataFrames:
+
+<dataframe>
+Dataframe dfs[0], with 225954 rows and 17 columns.
+This is the metadata of the dataframe dfs[0]:
+ID,innings,overs,ballnumber,batter,bowler,non-striker,extra_type,batsman_run,extras_run,total_run,non_boundary,isWicketDelivery,player_out,kind,fielders_involved,BattingTeam
+1312200,1,0,3,JC Buttler,Mohammed Shami,YBK Jaiswal,,1,0,1,0,0,,,,Rajasthan Royals
+1312200,1,0,2,YBK Jaiswal,Mohammed Shami,JC Buttler,legbyes,0,1,1,0,0,,,,Rajasthan Royals
+1312200,1,0,5,YBK Jaiswal,Mohammed Shami,JC Buttler,,0,0,0,0,0,,,,Rajasthan Royals
+1312200,1,0,1,YBK Jaiswal,Mohammed Shami,JC Buttler,,0,0,0,0,0,,,,Rajasthan Royals
+1312200,1,0,4,YBK Jaiswal,Mohammed Shami,JC Buttler,,0,0,0,0,0,,,,Rajasthan Royals
+</dataframe>
+
+<conversation>
+User: how many batter are there in this dataset
+</conversation>
+
+This is the initial python function. Do not change the params. Given the context, use the right dataframes.
+```python
+# TODO import all the dependencies required
+import pandas as pd
+
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    """
+    Analyze the data, using the provided dataframes (`dfs`).
+    1. Prepare: Preprocessing and cleaning data if necessary
+    2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+    3. Analyze: Conducting the actual analysis (if the user asks to plot a chart you must save it as an image in temp_chart.png and not show the chart.)
+    If the user requests to create a chart, utilize the Python matplotlib library to generate high-quality graphics that will be saved directly to a file.
+    At the end, return a dictionary of:
+    - type (possible values "string", "number", "dataframe", "plot")
+    - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+    Examples: 
+        { "type": "string", "value": f"The highest salary is {highest_salary}." }
+        or
+        { "type": "number", "value": 125 }
+        or
+        { "type": "dataframe", "value": pd.DataFrame({...}) }
+        or
+        { "type": "plot", "value": "temp_chart.png" }
+    """
+```
+
+Take a deep breath and reason step-by-step. Act as a senior data analyst.
+In the answer, you must never write the "technical" names of the tables.
+Based on the last message in the conversation:
+- return the updated analyze_data function wrapped within ```python ```
+2023-11-05 00:08:19 [INFO] error_code=insufficient_quota error_message='You exceeded your current quota, please check your plan and billing details.' error_param=None error_type=insufficient_quota message='OpenAI API error received' stream_error=False
